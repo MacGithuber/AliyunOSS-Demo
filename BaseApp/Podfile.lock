@@ -1,0 +1,20 @@
+PODS:
+  - AliyunOSSiOS (2.10.7)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - AliyunOSSiOS
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AliyunOSSiOS
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  AliyunOSSiOS: 602b6a4e70e62a5f0a6431c20496343141d7e66f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 95be7670ba7a497427e2eb2a87f9d0a21e8e1503
+
+COCOAPODS: 1.5.3
