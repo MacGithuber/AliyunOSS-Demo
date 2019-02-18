@@ -34,19 +34,18 @@
     for (NSInteger i = 0; i < images.count; i++) {
         OSSPhotoObj *obj = [OSSPhotoObj new];
         obj.photo = images[i];
-        obj.objectKey = [NSString stringWithFormat:@"%@/%@/image/%@.jpg",upload_Environment,userName,[NSUUID UUID].UUIDString];
+        obj.objectKey = [NSString stringWithFormat:@"%@/%@/image/%@.png",upload_Environment,userName,[NSUUID UUID].UUIDString];
         [photoObjs addObject:obj];
         NSLog(@"objectKey %@",obj.objectKey);
     }
     
-    NSLog(@"上传开始------------");
     [AliyunOSSDemo uploadPhotos:photoObjs complete:^(UploadImageState state) {
         if (state == UploadImageSuccess) {
             NSMutableArray *imgUrls = [NSMutableArray array];
             for (OSSPhotoObj *obj in photoObjs) {
                 [imgUrls addObject:obj.objectKey];
             }
-            [SVProgressHUD showErrorWithStatus:@"上传成功"];
+            [SVProgressHUD showSuccessWithStatus:@"上传成功"];
 
         }else{
             [SVProgressHUD showErrorWithStatus:@"上传失败"];
